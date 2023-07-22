@@ -1,12 +1,13 @@
 import React from 'react';
 import './header.css';
-
+import SearchIcon from '@material-ui/icons/Search'; 
 function Header() {
-  return (
+  return ( 
     <div className='header'>
       <img className='header_logo' src='/assets/Amazon-Logo.webp'  alt='logo' />
       <div className='header_search'>
         <input className='header_search_input' type='text'></input>
+        <SearchIcon className='header_search_icon'/>
       </div>
       <div className='header_nav'>
         <div className='header_option'>
@@ -14,7 +15,7 @@ function Header() {
           <span className='header_optionLn2'>Sign In</span>  
         </div>
         <div className='header_option'>
-          <span className='header_optionLn1'>Returns</span>
+          <span className='header_optionLn1'>Returns</span> 
           <span className='header_optionLn2'>& Orders</span>  
         </div>
         <div className='header_option'>
