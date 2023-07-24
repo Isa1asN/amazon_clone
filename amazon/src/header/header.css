@@ -7,6 +7,9 @@
     top: 0;
     z-index: 100;
 }
+.header_option:hover{
+    color: #e5a755;
+}
 .header_logo{
     width: 180px;
     height: 70px;
@@ -61,4 +64,10 @@
 .header_basket_count{
     margin-left: 10px;
     margin-right: 10px;
+}
+.cart_icon{
+    font-size:xx-large;
+}
+.cart_icon:hover{
+    color: #e5a755;
 }
