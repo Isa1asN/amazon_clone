@@ -37,3 +37,6 @@
   .rate_icon{
     color: gold;
   }
+  button{
+    cursor: pointer;
+  }

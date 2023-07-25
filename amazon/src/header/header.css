@@ -61,13 +61,15 @@
     align-items: center;
     color: white;
 }
+.header_basket:hover{
+    color: #e5a755;
+
+}
 .header_basket_count{
     margin-left: 10px;
     margin-right: 10px;
+    font-size: larger;
 }
 .cart_icon{
     font-size:xx-large;
-}
-.cart_icon:hover{
-    color: #e5a755;
 }
