@@ -14,7 +14,8 @@ function Checkout() {
 
             <div>
                 <h1 className='checkout_title'>Your shopping cart <ShoppingCartIcon /> </h1>
-                {cart.map((item, index) => (
+                { cart.length === 0 ? (<p id='no_item_txt'>You have no items in your cart</p>)
+                : cart.map((item, index) => (
                   <ShoppingCart key={index} id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image} />
                 ))}
             </div>
