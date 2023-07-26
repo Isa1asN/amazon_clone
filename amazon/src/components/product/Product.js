@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './product.css';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import { useStateValue } from '../stateProvider';
 
 function Product({id, title, image, price, rating}) {
-  // eslint-disable-next-line no-unused-vars
   const [state, dispatch] = useStateValue();
   // const {cart} = state;
   // console.log(cart)

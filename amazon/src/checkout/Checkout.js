@@ -5,6 +5,7 @@ import ShoppingCart from '../shopppingCart/ShoppingCart'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCartOutlined'
 import { useStateValue } from '../stateProvider'
 function Checkout() {
+  // eslint-disable-next-line no-unused-vars
   const [{cart}, dispatch] = useStateValue()
   return (
     <div className='checkout'>
@@ -14,7 +15,7 @@ function Checkout() {
             <div>
                 <h1 className='checkout_title'>Your shopping cart <ShoppingCartIcon /> </h1>
                 {cart.map((item, index) => (
-                  <ShoppingCart key={index} title={item.title} rating={item.rating} price={item.price} image={item.image} />
+                  <ShoppingCart key={index} id={item.id} title={item.title} rating={item.rating} price={item.price} image={item.image} />
                 ))}
             </div>
         </div>
