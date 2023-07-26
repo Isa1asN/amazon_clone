@@ -9,6 +9,7 @@ function Checkout() {
 
             <div>
                 <h1 className='checkout_title'>Your shopping cart</h1>
+                
             </div>
         </div>
 
