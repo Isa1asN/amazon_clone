@@ -4,11 +4,18 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../stateProvider';
+import { auth } from '../firebase';
 
 function Header() {
   // eslint-disable-next-line no-unused-vars
   const [state, dispatch] = useStateValue();
   const {cart} = state;
+  const {user} = state;
+  const handleAuth = () => {
+    if(user) {
+      auth.signOut()
+    }
+  }
   return ( 
     <div className='header'>
       <Link to="/">
@@ -19,10 +26,10 @@ function Header() {
         <SearchIcon className='header_search_icon'/>
       </div>
       <div className='header_nav'>
-        <Link to="login">
-        <div className='header_option'>
+        <Link to="/login">
+        <div className='header_option' onClick={handleAuth}>
           <span className='header_optionLn1'>Hello Guest</span>
-          <span className='header_optionLn2'>Sign In</span>  
+          <span className='header_optionLn2'>Sign {user ? 'Out' : 'In' }</span>  
         </div>
         </Link>
         <div className='header_option'>
