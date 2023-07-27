@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../stateProvider';
 
 function Header() {
+  // eslint-disable-next-line no-unused-vars
   const [state, dispatch] = useStateValue();
   const {cart} = state;
   return ( 
