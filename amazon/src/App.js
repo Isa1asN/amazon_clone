@@ -10,6 +10,7 @@ import Footer from './footer/Footer';
 import Login from './login/Login';
 import {auth} from './firebase';
 import { useStateValue } from './stateProvider';
+import Payment from './payment/Payment';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/" element={[ <Header />, <Home />, <Footer />]} />
           <Route path="/login" element={<Login />} />
           <Route path="/checkout" element={[<Header />, <Checkout />, <Footer />]} />
+          <Route path="/payment" element={[<Header />, <Payment />]} />
           <Route path="*" element={[<Header />, <h1 style={{height:'76vh', marginTop:'10vh'}}>:( Oops... Page does not exist! </h1>, <Footer />]} />
         </Routes>
         
