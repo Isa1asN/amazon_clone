@@ -26,9 +26,9 @@ function Header() {
         <SearchIcon className='header_search_icon'/>
       </div>
       <div className='header_nav'>
-        <Link to="/login">
+        <Link to={!user?  "/login" : null}>
         <div className='header_option' onClick={handleAuth}>
-          <span className='header_optionLn1'>Hello Guest</span>
+          <span className='header_optionLn1'>Hello {user ? `${user?.email}` : 'Guest'}</span>
           <span className='header_optionLn2'>Sign {user ? 'Out' : 'In' }</span>  
         </div>
         </Link>
